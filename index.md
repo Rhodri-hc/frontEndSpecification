@@ -526,3 +526,101 @@ parseInt(str, 10)
     window.addEventListener('message',func);
 
   ~~~
+  
+  
+  ## 配置用户代码片段
+  ```json
+  {
+  "au": {
+    "prefix": "au",
+    "body": [
+      "<!--",
+      "/**************************************************************************** ",
+      "所属模块: $1模块—[$2子模块]",
+      "页面/文件名称: $3",
+      "创建时间: ${CURRENT_YEAR}年${CURRENT_MONTH}月${CURRENT_DATE}日 ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "维护人: xxx",
+      "*┌────────────────────────────────────────────────────────────┐",
+      "*│  此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．│",
+      "*│  版权所有：xxxx有限公司                             │",
+      "*└────────────────────────────────────────────────────────────┘",
+      "***************************************************************************/",
+      "-->",
+    ],
+    "description": "头部注释"
+  },
+  "vu": {
+    "prefix": "vu",
+    "body": [
+      "<!--",
+      "/**************************************************************************** ",
+      "所属模块: $1模块—[$2子模块]",
+      "页面/文件名称: $3",
+      "创建时间: ${CURRENT_YEAR}年${CURRENT_MONTH}月${CURRENT_DATE}日 ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "维护人: xxx",
+      "*┌────────────────────────────────────────────────────────────┐",
+      "*│  此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．│",
+      "*│  版权所有：xxxx有限公司                             │",
+      "*└────────────────────────────────────────────────────────────┘",
+      "***************************************************************************/",
+      "-->",
+      "<template>",
+      " <jr-container></jr-container>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      " name:'$TM_FILENAME_BASE',",
+      " components: {},",
+      " mixins: [],",
+      " data() {",
+      " return {",
+      " }",
+      " },",
+      " created() {},",
+      " mounted() {},",
+      " methods: {}",
+      "}",
+      "</script>",
+      "" ,
+      "<style scoped lang='scss'>",
+      "</style>"
+    ],
+    "description": "vue基础模板"
+  },
+  "cc": {
+    "prefix": "cc",
+    "body": [
+      "/**",
+      "* @desc $1",
+      "* @author xxx",
+      "* @date ${CURRENT_YEAR}年${CURRENT_MONTH}月${CURRENT_DATE}日 ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "*/"
+    ],
+    "description": "方法注释"
+  },
+  "de": {
+    "prefix": "de",
+    "body": [
+      "/**",
+      "* @desc $1",
+      "* @param $2",
+      "* @return $3",
+      "* @author 张和潮",
+      "* @date ${CURRENT_YEAR}年${CURRENT_MONTH}月${CURRENT_DATE}日 ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "*/"
+    ],
+    "description": "方法注释"
+  },
+  "fo":{
+    "prefix": "fo",
+    "body": [
+      "$1.forEach(it=>{"
+      "   $2 "
+      "})"
+    ],
+    "description": "循环"
+  }
+}
+
+  ```
